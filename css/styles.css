@@ -82,7 +82,7 @@ img {
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  outline: red 2px solid;
+  /* outline: red 2px solid; */
 
   color: #afb1b8;
 
@@ -114,7 +114,7 @@ img {
   margin-left: auto;
   margin-right: auto;
 
-  outline: 2px solid red;
+  /* outline: 2px solid red; */
   outline-offset: -2px;
 }
 
@@ -464,7 +464,7 @@ p {
   fill: currentColor;
 }
 
-/* Footer */
+/* -----Footer----- */
 
 .footer {
   background-color: var(--second-bg-color);
@@ -474,8 +474,11 @@ p {
 
 .footer-box {
   display: flex;
-  gap: 70px;
   align-items: baseline;
+}
+
+.footer-address-box {
+  margin-right: 70px;
 }
 
 .footer .logo {
@@ -515,14 +518,20 @@ p {
   letter-spacing: 0.03em;
 }
 
+/* footer social */
+
 .footer-social-title {
+  display: block;
   color: var(--secondary-white-color);
-  font-weight: 700;
   text-transform: uppercase;
   font-size: 14px;
   line-height: 1.14;
 
   margin-bottom: 20px;
+}
+
+.footer-social-box {
+  margin-right: 93px;
 }
 
 .footer-social-box .socials-link {
@@ -537,6 +546,66 @@ p {
 .footer-social-box .socials-link:focus {
   background-color: var(--accent-color);
   color: var(--main-withe-color);
+}
+
+/* footer subscriptoion */
+.subscription-title {
+  display: block;
+  font-size: 14px;
+  line-height: calc(16 / 14);
+  text-transform: uppercase;
+
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.subscription {
+  display: flex;
+  gap: 12px;
+}
+
+.subscription-input {
+  margin: 0;
+  padding: 15px 16px;
+  min-width: 358px;
+  height: 50px;
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  background-color: transparent;
+
+  outline: none;
+}
+
+.subscription-input::placeholder {
+  font-size: 16px;
+  line-height: calc(20 / 16);
+
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.subscription-btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  min-width: 200px;
+  height: 50px;
+
+  font-weight: 700;
+  letter-spacing: 0.06em;
+
+  color: #ffffff;
+  background-color: #2196f3;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: transparent;
+}
+
+.subscription-btn-icon {
+  fill: #ffffff;
 }
 
 /* --------CSS для портфоліо(portfolio.html)-------- */
