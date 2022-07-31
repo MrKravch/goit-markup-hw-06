@@ -578,6 +578,7 @@ p {
   background-color: transparent;
 
   outline: transparent;
+  transition: border-color var(--timing-function);
 }
 
 .subscription-input:focus {
@@ -788,6 +789,15 @@ p {
   cursor: pointer;
 }
 
+.modal-btn-icon {
+  transition: fill var(--timing-function);
+}
+
+.modal-btn:hover .modal-btn-icon,
+.modal-btn:focus .modal-btn-icon {
+  fill: var(--accent-color);
+}
+
 .registration-form {
   text-align: center;
 }
@@ -837,12 +847,25 @@ p {
   border-radius: 4px;
 
   outline: transparent;
+  transition: border-color var(--timing-function);
+}
+
+.registration-form-input:hover,
+.registration-form-input:focus {
+  border-color: var(--accent-color);
 }
 
 .registration-form-icon {
   position: absolute;
   bottom: 11px;
   left: 12px;
+
+  transition: fill var(--timing-function);
+}
+
+.registration-form-input:hover + .registration-form-icon,
+.registration-form-input:focus + .registration-form-icon {
+  fill: var(--accent-color);
 }
 
 .registration-form-comment {
@@ -854,6 +877,13 @@ p {
 
   outline: transparent;
   resize: none;
+
+  transition: border-color var(--timing-function);
+}
+
+.registration-form-comment:hover,
+.registration-form-comment:focus {
+  border-color: var(--accent-color);
 }
 
 .registration-form-comment::placeholder {
@@ -871,28 +901,23 @@ p {
   margin-bottom: 30px;
 }
 
-.registration-agreement-input {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
-
 .registration-agreement-input:checked
   + .registration-agreement-icon
   .registration-agreement-icon-checked {
   opacity: 1;
 }
 
+.registration-agreement-icon-unchecked {
+  transition: opacity var(--timing-function);
+}
+
 .registration-agreement-icon-checked {
   opacity: 0;
+  transition: opacity var(--timing-function);
+}
+
+.registration-agreement-input:focus + .registration-agreement-icon {
+  fill: var(--accent-color);
 }
 
 .registration-agreement-input:checked
@@ -912,8 +937,10 @@ p {
 
   font-size: 14px;
   line-height: calc(24 / 14);
-
   letter-spacing: 0.03em;
+
+  user-select: none;
+  text-underline-position: under;
 
   color: #757575;
 }
@@ -947,4 +974,10 @@ p {
   border: transparent;
 
   cursor: pointer;
+  transition: background-color var(--timing-function);
+}
+
+.registration-form-btn:hover,
+.registration-form-btn:focus {
+  background-color: #188ce8;
 }
